@@ -1,12 +1,16 @@
-import { Text, View } from "react-native";
-import Constants from 'expo-constants';
+import { View, Text } from "react-native";
+import { Route, Routes } from "react-router-native";
 import { RepositoryList } from './RepositoryList';
+import { AppBar } from "./Appbar";
 
 export const Main = () =>{
     return(
-        <View style={{ marginTop: Constants.statusBarHeight, flexGrow: 1 }}>
-            <Text>Rate Repository Application</Text>
-            <RepositoryList/>
+        <View style={{ flex: 1 }}>
+            <AppBar/>
+            <Routes>
+                <Route path="/" element={<RepositoryList/>} />
+                <Route path="/sigin" element={ <Text>Working on in</Text> } />
+            </Routes>
         </View>
     )
 }
