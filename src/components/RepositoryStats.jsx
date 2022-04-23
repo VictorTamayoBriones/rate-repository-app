@@ -10,7 +10,7 @@ const parseThousands = value => {
 
 export const RepositoryStats = props =>{
     return(
-        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }} >
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
             <View>
                 <StyledText align='center' fontWeight='bold'>{parseThousands(props.stargazersCount)}</StyledText>
                 <StyledText align='center' >Stars</StyledText>

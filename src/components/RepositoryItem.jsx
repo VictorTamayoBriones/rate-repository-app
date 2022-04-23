@@ -9,8 +9,8 @@ const RepositoryItemHeader = (props)=>(
             <Image style={styles.image} source={{ uri: props.ownerAvatarUrl }} />
         </View>
         <View style={{ flex: 1 }} >
-            <StyledText fontWeight='bold' >{props.fullName}</StyledText>
-            <StyledText color='secondary'  >{props.description}</StyledText>
+            <StyledText style={{marginVertical: 1}} fontWeight='bold' >{props.fullName}</StyledText>
+            <StyledText style={{marginVertical: 1}} color='secondary'  >{props.description}</StyledText>
             <StyledText style={styles.language} >{props.language}</StyledText>
         </View>
     </View>
@@ -26,7 +26,8 @@ export const RepositoryItem = (props) => (
 const styles = StyleSheet.create({
     container:{
         padding: 20,
-        paddingVertical: 5
+        paddingVertical: 5,
+        marginBottom: 10
     },
     language:{
         padding: 4,
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
         backgroundColor: theme.colors.primary,
         alignSelf: 'flex-start',
         borderRadius: 4,
-        marginVertical: 4,
+        marginVertical: 6,
         overflow: 'hidden'
     },
     image:{
